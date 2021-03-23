@@ -15,7 +15,7 @@ PUBLIC config_t * params;
 PUBLIC sim_t * sim;
 
 /**
- * Funções auxiliares.Funções auxiliares.
+ * Funções auxiliares.
  */
 PRIVATE int execucao_setup(int argc, char * argv[]);
 PRIVATE void execucao_cleanup(void);
@@ -155,14 +155,14 @@ PRIVATE int execucao_setup(int argc, char * argv[])
 
 			for (int j = 0; j < nparams; ++j)
 			{
-				/* Lista de parâmetros chegou ao fim.*/
+				/* Lista de parâmetros chegou ao fim. */
 				if (++i == argc)
 					goto error;
 
-				/* Lê parâmetro.*/
+				/* Lê parâmetro. */
 				aux = atoi(argv[i]);
 
-				/* Escreve parâmetros.*/
+				/* Escreve parâmetros. */
 				memcpy((void *) (base + j), (void *) &aux, sizeof(int));
 			}
 		}
@@ -185,7 +185,7 @@ PRIVATE int execucao_setup(int argc, char * argv[])
 	plog("[main][params] Delay máximo:             %d ms\n", params->delay_max);
 	plog("[main][params] Delay gerente:            %d ms\n", params->delay_gerente);
 	plog("[main][params] Delay limpador:           %d ms\n", params->delay_limpador);
-	plog("[main][params] Número de Partidas:       %d\n",    params->partidas_max);
+	plog("[main][params] Número de partidas:       %d\n",    params->partidas_max);
 	plog("[main][params] Tempo máximo por partida: %d ms\n", params->partida_tempo_max);
 	plog("[main][params] Semente aleatória:        %d\n",    params->semente);
 	plog(SEPARADOR);

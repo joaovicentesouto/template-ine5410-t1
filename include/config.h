@@ -23,8 +23,8 @@
 	/**
 	 * @brief Modificadores de visualização de funções.
 	 */
-	#define EXTERN  extern /**< Torna uma definição visível por outros arquivos que enchergam esse EXTERN. */
-	#define PRIVATE static /**< Força que uma definiçã não possa ser chamada por outros arquivos.          */
+	#define EXTERN  extern /**< Torna uma definição visível por outros arquivos que enxergam esse EXTERN. */
+	#define PRIVATE static /**< Força que uma definição não possa ser chamada por outros arquivos.          */
 	#define PUBLIC         /**< Permite que a definição seja exportada (complemento do EXTERN).            */
 
 	/**
@@ -218,7 +218,7 @@
 	 *============================================================================*/
 
 	/**
-	 * @brief Inicializa o gerador de número aleatório.
+	 * @brief Inicializa o gerador de números aleatórios.
 	 *
 	 * @param semente Semente do gerador.
 	 */

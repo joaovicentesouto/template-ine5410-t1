@@ -18,12 +18,12 @@
 	EXTERN void porteiro_cleanup(void);
 
 	/**
-	 * @brief Jogador notifica termino ao porteiro.
+	 * @brief Jogador notifica término ao porteiro.
 	 */
 	EXTERN void porteiro_checklist(jogador_t * jogador);
 
 	/**
-	 * @brief Main do Porteiro.
+	 * @brief Main do porteiro.
 	 */
 	EXTERN void * porteiro_fn(void * arg);
 

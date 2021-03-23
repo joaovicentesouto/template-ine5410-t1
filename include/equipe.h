@@ -34,7 +34,7 @@
 		int capacidade;
 
 		/**
-		 * @brief arranjo de jogadores que entraram no equipe.
+		 * @brief Arranjo de jogadores que entraram na equipe.
 		 */
 		arranjo_t jogadores;
 

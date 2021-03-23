@@ -43,36 +43,36 @@ PRIVATE void jogador_sai_equipe(jogador_t * jogador);
  * jogador. Você deve implementar o que se espera de cada função seguindo
  * a descrição da mesma. Isto facilitará na avaliação do teu trabalho.
  *
- * 2. Você pode introduzir novas funções e estruturas para auxiliar caso
+ * 2. Você pode introduzir novas funções e estruturas para auxiliar, caso
  * necessário. Entretanto, essas chamadas abaixo são obrigatórias e devem
  * reproduzir o comportamento esperado.
  *
  * Seus objetivos são:
  * - Coordenar as threads (jogador, gerente e limpador) para que duas equipes
  *   de jogadores disputem uma partida de LazerGun.
- * - Jogadores vão ser criados aleatoriamente e tentaram participar de uma
+ * - Jogadores vão ser criados aleatoriamente e tentarão participar de uma
  *   partida.
- * - O jogador deve iniciar tentando entrar em uma equipa (A ou B). Cada thread
+ * - O jogador deve iniciar tentando entrar em uma equipe (A ou B). Cada thread
  *   só pode estar em uma única equipe.
- * - Alocado dentro de uma equipe, o jogador de pegar um colete, um capacete
- *   e uma arma da pratileira (código responsável por gerenciar o alocação dos
+ * - Uma vez alocado em uma equipe, o jogador deve pegar um colete, um capacete
+ *   e uma arma da prateleira (código responsável por gerenciar o alocação dos
  *   equipamentos).
  * - Jogadores prontos para a partida devem esperar que as duas equipes estejam
- *   completos.
+ *   completas.
  * - Se uma partida estiver em andamento, novos jogadores devem esperar a sua
  *   conclusão. Ou seja, eles não podem entrar em uma equipe enquanto uma
  *   partida estiver em andamento ou esteja cheia.
  * - Durante a partida, o jogador deve escolher aleatoriamente um jogador
  *   inimigo e causar dano a ele. Após isso, o jogador deve esperar um tempo
- *   aleatorio para atacar novamente.
+ *   aleatório para atacar novamente.
  * - O gerente deve esperar que todos os jogadores de uma equipe estejam mortos
  *   ou o tempo limite estourar para finalizar uma partida.
- * - O gerente também deve de tempos em tempos curar todos os jogadores, caso
+ * - O gerente também deve, periodicamente, curar todos os jogadores, caso
  *   eles não estejam mortos (vida > 0 e status != JOGADOR_MORTO).
  * - Jogadores mortos devem esperar a partida terminar.
  * - Depois de uma partida terminar, o jogador deve liberar a vaga da equipe
- *   e, depois, requisitar a limpesa dos equipamentos para o limpador.
- * - O limpador limpa os equipamentos e coloca eles novamente na pratileira.
+ *   e, depois, requisitar a limpeza dos equipamentos para o limpador.
+ * - O limpador limpa os equipamentos e coloca eles novamente na prateleira.
  * - Quando todas as partidas terminarem, o programa deve finalizar a execução.
  *
  * ATENÇÃO: A criação e liberação dos recursos de um jogador é responsabilidade do
@@ -124,15 +124,14 @@ PUBLIC void * jogador_fn(void * arg)
 
 /**
  * @brief O jogador deve tentar entrar em uma equipe que ainda tenha vagas
- * disponíveis. Caso a partida já tenha iniciado, nenhum jogador por entrar em
+ * disponíveis. Caso a partida já tenha iniciado, nenhum jogador pode entrar em
  * uma equipe.
  *
  * A quantidade de jogadores por equipe é constante e está definida na
  * variável global params.
  *
  * A variável global partida contém as estruturas das equipes. Você deve
- * coordenar os jogadores para entrarem em alguma dessas equipes de forma
- * atômica.
+ * coordenar os jogadores para entrarem em alguma dessas equipes.
  */
 PRIVATE void jogador_escolhe_equipe(jogador_t * jogador)
 {
@@ -193,13 +192,13 @@ PRIVATE void jogador_espera_partida_comecar(jogador_t * jogador)
  *============================================================================*/
 
 /**
- * @brief O jogador deve enquanto a partida estiver em andamento (iniciada) ou
- * não esteja morto, procurar um alvo aleatório na equipe adversária e causar
- * um dano aleatório (params->dano_min <= dano < params->dano_max) ao alvo.
- * Caso a vida do advserário fique menor ou igual a zero, o adversário deve ser
+ * @brief Enquanto a partida estiver em andamento, jogadores vivos devem
+ * procurar um alvo aleatório na equipe adversária e causar
+ * um dano aleatório (params->dano_min <= dano < params->dano_max) no alvo.
+ * Caso a vida do adversário fique menor ou igual a zero, o adversário deve ser
  * movido pro estado MORTO e não pode mais continuar jogando.
- * Depois de atacar, o jogador deve esperar um tempo antes de atacar denovo
- * (params->delay_min <= t < params->delay_max);
+ * Depois de atacar, o jogador deve esperar um tempo aleatório antes de atacar
+ * novamente (params->delay_min <= t < params->delay_max);
  */
 PRIVATE void jogador_joga_partida(jogador_t * jogador)
 {
@@ -251,8 +250,8 @@ PRIVATE void jogador_sai_equipe(jogador_t * jogador)
 
 /**
  * @brief Após sair da equipe, o jogador deve solicitar ao limpador que
- * higienize os equipamento. O limpador deve ser responsável por devolve-los
- * a prateleira.
+ * higienize os equipamento. O limpador deve ser responsável por devolvê-los
+ * à prateleira.
  */
 PRIVATE void jogador_libera_equipamento(jogador_t * jogador)
 {

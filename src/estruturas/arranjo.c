@@ -10,15 +10,13 @@
  *============================================================================*/
 
 /**
- * @brief Inicia e aloca os recursos de uma arranjo.
+ * @brief Inicia e aloca os recursos de um arranjo.
  *
- * @param arranjo       Ponteiro de uma arranjo.
- * @param capacidade Tamanho da arranjo.
+ * @param arranjo    Ponteiro de um arranjo.
+ * @param capacidade Tamanho do arranjo.
  */
 PUBLIC void arranjo_iniciar(arranjo_t * arranjo, int capacidade)
 {
-	assert(arranjo && capacidade > 0);
-
 	/* Implemente se for usar. */
 }
 
@@ -27,14 +25,12 @@ PUBLIC void arranjo_iniciar(arranjo_t * arranjo, int capacidade)
  *============================================================================*/
 
 /**
- * @brief Libera recursos de uma arranjo.
+ * @brief Libera recursos de um arranjo.
  *
- * @param arranjo Ponteiro de uma arranjo.
+ * @param arranjo Ponteiro de um arranjo.
  */
 PUBLIC void arranjo_destruir(arranjo_t * arranjo)
 {
-    assert(arranjo && arranjo->buffer);
-
 	/* Implemente se for usar. */
 }
 
@@ -43,15 +39,13 @@ PUBLIC void arranjo_destruir(arranjo_t * arranjo)
  *============================================================================*/
 
 /**
- * @brief Coloca uma valor no final da arranjo.
+ * @brief Coloca um elemento no arranjo.
  *
- * @param arranjo  Ponteiro de uma arranjo.
- * @param valor Valor que deve ser armazenado.
+ * @param arranjo  Ponteiro de um arranjo.
+ * @param elemento Elemento a ser armazenado no arranjo.
  */
-PUBLIC void arranjo_colocar(arranjo_t * arranjo, void * valor)
+PUBLIC void arranjo_colocar(arranjo_t * arranjo, void * elemento)
 {
-    assert(arranjo && arranjo->buffer);
-
 	/* Implemente se for usar. */
 }
 
@@ -60,22 +54,20 @@ PUBLIC void arranjo_colocar(arranjo_t * arranjo, void * valor)
  *============================================================================*/
 
 /**
- * @brief Retira o valor da cabeça da arranjo.
+ * @brief Retira um elemento do arranjo.
  *
- * @param arranjo Ponteiro de uma arranjo.
+ * @param arranjo Ponteiro de um arranjo.
  *
- * @return Se a arranjo estiver vazio retorna NULL. Caso contrário, retorna
- * o valor da cabeça da arranjo.
+ * @return Se o arranjo estiver vazio retorna NULL. Caso contrário, retorna
+ * um elemento do arranjo.
  */
 PUBLIC void * arranjo_retirar(arranjo_t * arranjo)
 {
-	void * valor = NULL;
-
-    assert(arranjo && arranjo->buffer);
+	void * elemento = NULL;
 
 	/* Implemente se for usar. */
 
-    return valor;
+    return elemento;
 }
 
 /*============================================================================*
@@ -83,15 +75,13 @@ PUBLIC void * arranjo_retirar(arranjo_t * arranjo)
  *============================================================================*/
 
 /**
- * @brief Retira o primeiro valor encontrado na arranjo.
+ * @brief Remove um elemento do arranjo.
  *
- * @param arranjo  Ponteiro de uma arranjo.
- * @param valor Valor a ser removido.
+ * @param arranjo  Ponteiro de um arranjo.
+ * @param valor    Elemento a ser removido.
  */
-PUBLIC void arranjo_remover(arranjo_t * arranjo, void * valor)
+PUBLIC void arranjo_remover(arranjo_t * arranjo, void * elemento)
 {
-    assert(arranjo && arranjo->buffer);
-
 	/* Implemente se for usar. */
 }
 
@@ -100,16 +90,14 @@ PUBLIC void arranjo_remover(arranjo_t * arranjo, void * valor)
  *============================================================================*/
 
 /**
- * @brief Verifica se a arranjo está vazio.
+ * @brief Verifica se o arranjo está vazio.
  *
- * @param arranjo Ponteiro de uma arranjo.
+ * @param arranjo Ponteiro de um arranjo.
  *
- * @return Diferente de zero se a arranjo está vazio, Zero, caso contrário.
+ * @return Diferente de zero se o arranjo está vazio. Zero, caso contrário.
  */
 PUBLIC int arranjo_vazio(arranjo_t * arranjo)
 {
-    assert(arranjo);
-
 	/* Implemente se for usar. */
 
     return (false);
@@ -120,16 +108,14 @@ PUBLIC int arranjo_vazio(arranjo_t * arranjo)
  *============================================================================*/
 
 /**
- * @brief Verifica o tamanho da arranjo.
+ * @brief Verifica o tamanho do arranjo.
  *
- * @param arranjo Ponteiro de uma arranjo.
+ * @param arranjo Ponteiro de um arranjo.
  *
- * @return Retorna o tamanho atual da arranjo.
+ * @return Retorna o tamanho atual do arranjo.
  */
 PUBLIC int arranjo_tamanho(arranjo_t * arranjo)
 {
-    assert(arranjo);
-
 	/* Implemente se for usar. */
 
 	return (0);

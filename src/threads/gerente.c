@@ -44,11 +44,11 @@ PUBLIC void gerente_cleanup(void)
  *
  * Descrição: O Gerente deve coordenar as partidas, ou seja:
  * - Esperar que as equipes se formarem.
- * - Inicia a partida.
+ * - Iniciar a partida.
  * - Enquanto o tempo de partida não ultrapassar params->partida_tempo_max
  *   e ainda existem jogadores vivos em ambas as equipes:
  * --- Esperar params->delay_gerente
- * --- Cura todos os jogadores vivos com params->dano_cura.
+ * --- Perioricamente, curar todos os jogadores vivos com params->dano_cura.
  *
  * ATENÇÃO: Você deve incrementar os contadores do sim_t referente a partida
  * e jogadores curados.

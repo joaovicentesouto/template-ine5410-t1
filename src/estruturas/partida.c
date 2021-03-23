@@ -6,7 +6,7 @@
  */
 
 /*============================================================================*
- * Definição das variáveis globais (publicas ou privadas)                     *
+ * Definição das variáveis globais (públicas ou privadas)                     *
  *============================================================================*/
 
 /**
@@ -15,7 +15,7 @@
  */
 
 /**
- * @brief Definição da variável global.
+ * @brief Definição de variáveis globais.
  */
 PUBLIC partida_t * partida;
 
@@ -92,7 +92,7 @@ PUBLIC partida_status_t partida_status(void)
  *============================================================================*/
 
 /**
- * @brief Printa equipe vencedora.
+ * @brief Imprime equipe vencedora.
  */
 PRIVATE void partida_print_resultado(int tempo_restante, int sobreviventes, partida_resultado_t res)
 {
@@ -138,7 +138,7 @@ PRIVATE void partida_print_resultado(int tempo_restante, int sobreviventes, part
  *============================================================================*/
 
 /**
- * @brief Verifica qual equipe venceu e printa o resultado informando o tempo
+ * @brief Verifica qual equipe venceu e imprime o resultado informando o tempo
  * restante da partida, a quantidade de sobreviventes na equipe vencedora (ou
  * em cada equipe se ouver empate) e o número da partida.
  *

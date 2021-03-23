@@ -8,29 +8,15 @@
 	 *============================================================================*/
 
 	/**
-	 * @brief Estrutura da arranjo.
+	 * @brief Estrutura de um arranjo genérico.
 	 */
 	typedef struct
 	{
 		/**
-		 * @brief Variáveis de proteção.
-		 */
-		int capacidade;       /**< Tamanho máximo.  */
-
-		/**
-		 * @brief Variáveis de controle.
-		 */
-		int tamanho;          /**< Tamanho atual.   */
-		int inicio;           /**< Posição Inicial. */
-		int fim;              /**< Posição final.   */
-
-		/**
-		 * @brief Buffer.
-		 */
-		void ** buffer;       /**< Buffer.          */
-
-		/**
-		 * @brief Complemente se precisar.
+		 * @brief Adicione aqui o código necessário para implementar a estrutura de
+		 * dados. Tenha em mente que vários tipos de estruturas de dados podem ser
+		 * usados (fila, pilha, lista, ...). Você poderá implementar a estrutura de
+		 * dados que achar mais adequada para o trabalho. 
 		 */
 
 	} arranjo_t;

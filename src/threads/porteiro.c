@@ -43,7 +43,7 @@ PUBLIC void porteiro_checklist(jogador_t * jogador)
 
 /**
  * @brief Verifica se existem jogadores que saíram e
- * que precisam que os recursos sejam desalocados.
+ * que precisam desalocar os seus recursos.
  */
 PRIVATE void verifica_checklist(void)
 {

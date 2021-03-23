@@ -18,12 +18,12 @@
 	EXTERN void limpador_cleanup(void);
 
 	/**
-	 * @brief Jogador notifica termino ao porteiro.
+	 * @brief Jogador notifica término ao porteiro.
 	 */
 	EXTERN void limpador_requisita_limpeza(equipamentos_t * equipamentos);
 
 	/**
-	 * @brief Main do Limpador.
+	 * @brief Main do limpador.
 	 */
 	EXTERN void * limpador_fn(void * arg);
 

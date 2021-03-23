@@ -52,15 +52,16 @@ PUBLIC void prateleira_cleanup(void)
  * Descrição: O jogador deve tentar pegar da prateleira os equipamentos
  * necessários. Especificamente, um de cada tipo: colete, capacete e arma.
  *
- * Os equipamentos devem ser identificador únicos variando dentro do intervalo:
+ * Os equipamentos devem ter identificadores únicos variando dentro do intervalo:
  * 0 <= ID < 2 * params->jogadores_por_equipe.
  *
  * ATENÇÃO: Um identificador deve ser único e não pode ser retornado se o mesmo
  * já estiver alocado para um jogador.
  *
  * Dica: Você deve utilizar uma estrutura de dados para armazenar os
- * identificadores dos equipamentos. Você pode utilizar o estrutura arranjo
- * (se implementou as funções dela).
+ * identificadores dos equipamentos. Para isso, implemente a estrutura "arranjo",
+ * cujo esqueleto já foi definido. Veja detalhes de implementação dessa estrutura
+ * no arquivo arranjo.h.
  */
 PUBLIC void prateleira_pega_equipamentos(equipamentos_t * equipamentos)
 {
@@ -78,7 +79,7 @@ PUBLIC void prateleira_pega_equipamentos(equipamentos_t * equipamentos)
  *
  * @return equipamentos Slot de equipamentos limpos.
  *
- * Descrição: O limpador deve armazenas novamente os equipamentos que acabaram
+ * Descrição: O limpador deve armazenar novamente os equipamentos que acabaram
  * de serem limpos.
  *
  * ATENÇÃO: Um identificador deve ser único e não pode ser retornado se o mesmo

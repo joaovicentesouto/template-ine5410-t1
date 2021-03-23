@@ -10,11 +10,11 @@
 	/**
 	 * @brief Estrutura dos equipamentos APENAS PARA O JOGADOR.
 	 */
-	typedef struct equipemantos
+	typedef struct equipamentos
 	{
-		int colete;   /**< Identificadores único de colete.   */
-		int capacete; /**< Identificadores único de capacete. */
-		int arma;     /**< Identificadores único de arma.     */
+		int colete;   /**< Identificador único do colete.   */
+		int capacete; /**< Identificador único do capacete. */
+		int arma;     /**< Identificador único da arma.     */
 	} equipamentos_t;
 
 	/*============================================================================*
@@ -32,13 +32,12 @@
 	EXTERN void prateleira_cleanup(void);
 
 	/**
-	 * @brief Funções alocam um equipamento.
+	 * @brief Função que permite o jogador pegar os equipamentos da prateleira.
 	 */
 	EXTERN void prateleira_pega_equipamentos(equipamentos_t * equipamentos);
 
 	/**
-	 * @brief Funções que liberam um equipamento para ser alocado por um
-	 * jogador.
+	 * @brief Função que permite o jogador devolver os equipamentos após o uso.
 	 */
 	EXTERN void prateleira_libera_equipamentos(equipamentos_t * equipamentos);
 

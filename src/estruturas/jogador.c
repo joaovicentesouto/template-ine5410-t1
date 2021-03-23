@@ -10,14 +10,15 @@
  *============================================================================*/
 
 /**
- * @brief Configure valores default de um jogador.
+ * @brief Configura valores padrão de um jogador.
  */
 PUBLIC void jogador_setup(jogador_t * jogador, int id)
 {
 	assert(jogador != NULL);
 
 	/**
-	 * Inicialmente o jogador não possui equipamento.
+	 * Inicialmente o jogador possui 100% de vida, encontra-se no estado
+	 * "entrando" e não possui equipe.
 	 */
 	jogador->id     = id;
 	jogador->vida   = 100;
